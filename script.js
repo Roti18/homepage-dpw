@@ -95,7 +95,7 @@ async function load() {
   contProject.innerHTML = ``;
   page.forEach((el) => {
     contProject.innerHTML += `
-      <a href="${el.link}" class="card">
+      <a href="${el.link}" class="card" target="_blank">
         <div class="left">
           <img src="${el.image}" alt="${el.name}" />
         </div>
