@@ -1,18 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
 :root {
-  --bg-main: #0f172a;
-  --bg-secondary: #1e293b;
-  --text-main: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --border-color: #334155;
-  --accent: #38bdf8;
-  --accent-hover: #0ea5e9;
-  --shadow: rgba(15, 23, 42, 0.6);
+  --mono-black: #000000;
+  --mono-950: #0a0a0a;
+  --mono-900: #171717;
+  --mono-850: #262626;
+  --mono-800: #404040;
+  --mono-750: #525252;
+  --mono-700: #737373;
+  --mono-650: #8b8b8b;
+  --mono-600: #a3a3a3;
+  --mono-500: #d4d4d4;
+  --mono-400: #f0f0f0;
+  --mono-300: #f8f8f8;
+  --mono-200: #fafafa;
+  --mono-100: #fcfcfc;
+  --mono-white: #ffffff;
+
+  --bg-primary: var(--mono-950);
+  --bg-secondary: var(--mono-900);
+  --bg-tertiary: var(--mono-850);
+  --text-primary: var(--mono-100);
+  --text-secondary: var(--mono-500);
+  --text-muted: var(--mono-700);
+  --border-primary: var(--mono-800);
+  --border-secondary: var(--mono-750);
+  --bg-trans: #aaaaaa10;
+  --font-inter: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+body {
+  background-color: var(--mono-900);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li,
+a {
+  text-decoration: none;
+}
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+.bi-arrow-up-short {
+  display: inline-block;
+  transform: rotate(45deg) translateY(5px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-secondary);
+  font-size: 25px;
+}
+
+main {
+  display: flex;
+  padding: 6rem 12rem;
+  width: 100%;
+  gap: 3rem;
+  min-height: 100vh;
+}
+
+main .left {
+  position: sticky;
+  top: 6rem;
+  width: 45%;
+  height: fit-content;
+}
+main .left .top {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+main .left .top img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--mono-800);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+main .left .top img:hover {
+  border-color: var(--mono-600);
+  transform: scale(1.05);
+}
+main .left .top h2 {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--mono-400);
+  margin: 1.5rem 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+main .left .top p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--mono-600);
+  line-height: 1.5;
+}
+
+main .left ul {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+li {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+li a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+li a span {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--text-muted);
+  margin-right: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 2px;
+  border-radius: 2px;
+}
+li.active a {
+  color: var(--mono-300);
+  transform: translateX(8px);
+}
+li.active a span {
+  width: 90px;
+  background-color: var(--mono-300);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+li:hover {
+  cursor: pointer;
+  transform: translateX(4px);
+}
+li:hover a {
+  color: var(--text-primary);
+}
+li:hover a span {
+  width: 80px;
+  background-color: var(--mono-400);
+}
+
+.bottom {
+  display: flex;
+  gap: 1rem;
+  margin-top: 6rem;
+}
+.bottom a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.75rem;
+  border-radius: 24px;
+  color: var(--text-primary);
+  transition: all 0.4s cubic-bezier(1, 0, 0.5, 1);
+  position: relative;
+}
+.bottom a:hover {
+  border-color: var(--mono-700);
+}
+.bottom span {
+  opacity: 0;
+  max-width: 0;
+  font-weight: 600;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.bottom i {
+  color: var(--text-secondary);
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+.bottom a:hover span {
+  opacity: 1;
+  max-width: 150px;
+}
+.bottom a:hover i {
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+main .right {
+  width: 55%;
+  flex: 1;
+}
+main .right #tentang {
+  color: var(--mono-600);
+  line-height: 1.7;
+  font-size: 15px;
+  padding: 1rem;
+  border-radius: 12px;
+}
+main .right #tentang p {
+  margin-bottom: 1.5rem;
+}
+main .right #tentang span {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--mono-400);
+}
+.code {
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--bg-trans);
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  color: var(--mono-200);
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 1px solid var(--mono-650);
+}
+
+main .right #team {
+  margin: 8rem 0;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+main .right #team a {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-primary);
+  border-radius: 16px;
+  border: 1px solid transparent;
+  background-color: var(--mono-900);
+}
+main .right #team a:hover {
+  background-color: var(--bg-trans);
+}
+main .right #team a:hover .left img {
+  border-color: var(--mono-650);
+  transform: scale(1.05);
+}
+main .right #team a:hover .bi-arrow-up-short {
+  transform: rotate(45deg) translateY(-5px);
+  color: var(--mono-400);
+}
+main .right #team a .left {
+  width: auto;
+}
+main .right #team a .left img {
+  border: 2px solid var(--mono-800);
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+main .right #team a .right {
+  flex: 1;
+}
+main .right #team a .right p {
+  margin-bottom: 0.5rem;
+}
+main .right #team a .right p:first-child {
+  font-weight: 800;
+  color: var(--mono-300);
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+main .right #team a .right p:last-child {
+  font-size: 14px;
+  color: var(--mono-600);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+main .right #project {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+main .right #project .card {
+  display: flex;
+  padding: 0.5rem 1.5rem 1rem 1.5rem;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+main .right #project .card:hover {
+  background-color: var(--mono-750);
+}
+main .right #project .card .left {
+  width: auto;
+}
+main .right #project .card .right {
+  width: auto;
+}
+main .right #project .card .left img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 2rem;
+  margin-top: 0.8rem;
+  border: 1px solid var(--mono-800);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+main .right #project .card:hover .bi-arrow-up-short {
+  transform: rotate(45deg) translateY(0px);
+  color: var(--mono-400);
+}
+main .right #project .card:hover .left img {
+  transform: scale(1.02);
+  border-color: var(--mono-700);
+}
+main .right #project .card .right p:nth-child(1) {
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--mono-300);
+}
+main .right #project .card .right p:nth-child(2) {
+  color: var(--mono-600);
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 1rem;
 }
 
 .card-tech {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 .card-tech span {
-  background-color: rebeccapurple;
+  color: var(--mono-600);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7em;
+  font-weight: 600;
+  background-color: var(--bg-trans);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-tech span:hover .bi-arrow-up-short {
+  color: var(--mono-100);
 }

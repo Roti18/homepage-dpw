@@ -41,7 +41,7 @@
     },
     {
       "name": "Halaman Artikel",
-      "image": "/img/page/home-artikel.png",
+      "image": "/img/page/artikel.png",
       "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/artikel/free-fire-max-project-dawn-update-2025-character-evolution",
       "description": "Menampilkan isi lengkap dari artikel pilihan user.",
       "tech": ["HTML", "CSS", "JavaScript", "Marked.js", "Express.js"]
