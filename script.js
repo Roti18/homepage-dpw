@@ -1,11 +1,9 @@
 async function load() {
   const response = await fetch("./data.json");
   const data = await response.json();
-
   const team = data.team;
   const page = data.page;
   const link = data.link;
-
   console.log(team);
   console.log(page);
   console.log(link);
@@ -14,7 +12,7 @@ async function load() {
   contTop.innerHTML = `
     <img src="/img/people/me.png" alt="Moch. Zamroni Fahreza" />
     <h2>Moch. Zamroni Fahreza</h2>
-    <p>Pengembang Web Game: Transaksi & Konten</p>
+    <p>Pengembang Web Top-Up Game: Transaksi & Konten</p>
     `;
 
   const contNav = document.querySelector("ul");
@@ -79,7 +77,7 @@ async function load() {
   contTeam.innerHTML = ``;
   team.forEach((el) => {
     contTeam.innerHTML += `
-      <a href="${el.link}">
+      <a href="${el.link}" target="_blank">
         <div class="left">
           <img src="${el.image}" alt="${el.name}" />
         </div>
