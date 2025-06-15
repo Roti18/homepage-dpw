@@ -12,7 +12,7 @@ async function load() {
   contTop.innerHTML = `
     <img src="/img/people/me.png" alt="Moch. Zamroni Fahreza" />
     <h2>Moch. Zamroni Fahreza</h2>
-    <p>Pengembang Web Top-Up Game: Transaksi & Konten</p>
+    <p>240411100085</p>
     `;
 
   const contNav = document.querySelector("ul");
