@@ -533,7 +533,7 @@ main .right #project .card .right p:nth-child(2) {
   }
   main .right #tentang {
     margin-top: 0;
-    padding: 0;
+    padding: 0 1rem;
   }
   main .right #team {
     margin: 3rem 0;
@@ -595,7 +595,7 @@ main .right #project .card .right p:nth-child(2) {
   }
   main .right #tentang {
     font-size: 14px;
-    padding: 0;
+    padding: 0 1rem;
   }
   main .right #team a {
     padding: 0.8rem;
