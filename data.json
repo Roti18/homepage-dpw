@@ -35,42 +35,42 @@
     {
       "name": "Artikel Home",
       "image": "/img/page/home-artikel.png",
-      "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/artikel",
+      "link": "https://proyek-dpw-production.up.railway.app/artikel",
       "description": "Menampilkan informasi dan artikel terbaru seputar game.",
       "tech": ["HTML", "CSS", "JavaScript", "Express.js"]
     },
     {
       "name": "Halaman Artikel",
       "image": "/img/page/artikel.png",
-      "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/artikel/free-fire-max-project-dawn-update-2025-character-evolution",
+      "link": "https://proyek-dpw-production.up.railway.app/artikel/free-fire-max-project-dawn-update-2025-character-evolution",
       "description": "Menampilkan isi lengkap dari artikel pilihan user.",
       "tech": ["HTML", "CSS", "JavaScript", "Marked.js", "Express.js"]
     },
     {
       "name": "News Home",
       "image": "/img/page/home-news.png",
-      "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/news",
+      "link": "https://proyek-dpw-production.up.railway.app/news",
       "description": "Update dan berita terbaru tentang game.",
       "tech": ["HTML", "CSS", "JavaScript", "Express.js"]
     },
     {
       "name": "Halaman News",
       "image": "/img/page/news.png",
-      "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/news/technotaiment-2025-is-back",
+      "link": "https://proyek-dpw-production.up.railway.app/news/technotaiment-2025-is-back",
       "description": "Menampilkan detail lengkap berita pilihan pengguna.",
       "tech": ["HTML", "CSS", "JavaScript", "Marked.js", "Express.js"]
     },
     {
       "name": "List Game",
       "image": "/img/page/list-game.png",
-      "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/list-game",
+      "link": "https://proyek-dpw-production.up.railway.app/list-game",
       "description": "Daftar game yang tersedia untuk top-up.",
       "tech": ["HTML", "CSS", "JavaScript", "Express.js"]
     },
     {
       "name": "Halaman Top Up",
       "image": "/img/page/transaksi.png",
-      "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/top-up/genshin",
+      "link": "https://proyek-dpw-production.up.railway.app/top-up/genshin",
       "description": "Form top-up dengan pilihan nominal dan metode pembayaran.",
       "tech": ["HTML", "CSS", "JavaScript", "Express.js"]
     },
@@ -84,14 +84,14 @@
     {
       "name": "Halaman Pembayaran",
       "image": "/img/page/pembayaran.png",
-      "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/payment/INV-1749520281988-5388",
+      "link": "https://proyek-dpw-production.up.railway.app/payment/INV-1749520281988-5388",
       "description": "Rincian pembayaran dan verifikasi data pengguna.",
       "tech": ["HTML", "CSS", "JavaScript", "Express.js"]
     },
     {
       "name": "Not Found",
       "image": "/img/page/page-not-found.png",
-      "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/notfound",
+      "link": "https://proyek-dpw-production.up.railway.app/notfound",
       "description": "Halaman error 404 untuk navigasi yang tidak valid.",
       "tech": ["HTML", "CSS", "Express.js"]
     }
@@ -100,7 +100,7 @@
     {
       "ikon": "bi bi-github",
       "text": "Source Code",
-      "link": "https://github.com/ELGHIFARY111/Proyek-dpw"
+      "link": "https://github.com/Roti18/webprib-dpw"
     },
     {
       "ikon": "bi bi-file-earmark-text",
@@ -110,7 +110,7 @@
     {
       "ikon": "bi bi-link-45deg",
       "text": "Demo",
-      "link": "https://nz0mxnmt-8000.asse.devtunnels.ms/"
+      "link": "https://proyek-dpw-production.up.railway.app/"
     }
   ]
 }
